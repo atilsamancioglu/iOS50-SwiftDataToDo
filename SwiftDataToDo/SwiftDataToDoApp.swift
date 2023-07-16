@@ -11,7 +11,9 @@ import SwiftUI
 struct SwiftDataToDoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-        }
+            NavigationStack {
+                ListScreen()
+            }
+        }.modelContainer(for: [ToDo.self])
     }
 }
